@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+
+header{
+    /*Fondo*/
+    background-image: url(fondoNeon.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /*Disposición*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+/*-----------------------LETRAS NEÓN-----------------------*/
+.flicker{
+    font-size: 20vw;    
+    animation: flicker 1s linear infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+      text-shadow:
+      0 0 3px #fff, /* Sombra blanca */
+      0 0 5px #fff, /* Sombra blanca */
+      0 0 7px #ff00de, /* Sombra neon */
+      0 0 10px #ff00de, /* Sombra neon */
+      0 0 15px #ff00de, /* Sombra neon */
+      0 0 20px #ff00de; /* Sombra neon */
+      color: #b1b1b1;
+    }
+    to {
+      text-shadow:
+      0 0 10px #fff, /* Sombra blanca */
+      0 0 14px #fff, /* Sombra blanca */
+      0 0 20px #ff00de, /* Sombra neon */
+      0 0 24px #ff00de, /* Sombra neon */
+      0 0 34px #ff00de, /* Sombra neon */
+      0 0 44px #ff00de; /* Sombra neon */
+      color: #ffffff;
+    }
+}
+/*---------------------------FIN---------------------------*/
+
+/*----------------------LETRAS NEÓN 2----------------------*/
+.flicker2{
+    font-size: 8vw;    
+    animation: flicker2 2s linear infinite alternate;
+    width: 30%;
+    flex: 80%;
+    align-content: center;
+}
+
+@keyframes flicker2 {
+    from {
+      text-shadow:
+      0 0 3px #fff, /* Sombra blanca */
+      0 0 5px #fff, /* Sombra blanca */
+      0 0 7px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 10px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 15px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 20px #ffec00; /* Sombra amarilla fosforescente */
+      color: #b1b1b1;
+    }
+    to {
+      text-shadow:
+      0 0 5px #fff, /* Sombra blanca */
+      0 0 7px #fff, /* Sombra blanca */
+      0 0 8px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 10px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 20px #ffec00, /* Sombra amarilla fosforescente */
+      0 0 25px #ffec00; /* Sombra amarilla fosforescente */
+      color: #ffffff;
+    }
+  }
+  
+/*---------------------------FIN---------------------------*/
+
+/*------------CONTENEDORES DE CUENTA REGRESIVA------------*/  
+.sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 20px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+
+    height: 10%;
+    background-color: black;
+}
+
+.titleSticky{
+    color: #ff6ec3;
+    margin: auto;
+    font-size: 4vh;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.number {
+color: white;
+font-size: 2vh;
+font-weight: bold;
+} 
+
+.etiqueta {
+font-size: 2vh;
+color: #ff6ec3;
+font-weight: bold;
+}
+
+/*------------FIN------------*/  
+
+.invite{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+}
+
+.lounge{
+    /*Fondo*/
+    background-image: url(fotoSalon.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    top: 10%;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.invite-text{
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    color: #ff6ec3;
+    font-size: 4vh;
+    overflow:auto;
+    
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    a{
+        text-decoration: none;
+        color: #ff6ec3;
+    }
+}
+
+.topic{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+    animation: neonBorderOn 3s infinite alternate;
+    margin: 10%;
+}
+
+/*BORDE NEÓN*/  
+@keyframes neonBorderOn {
+    0% {
+      box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    }
+    50% {
+      box-shadow: none;
+    }
+    100% {
+      box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    }
+  }
+  
+  @keyframes neonBorderOff {
+    0%, 50% {
+      box-shadow: none;
+    }
+    100% {
+      box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    }
+  }
+  
+  .neon-border {
+    /*Fondo*/
+    background-image: url(neonImage2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    padding: 5%;
+    height: 30vh;
+    width: 20vw;
+  }
+
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    color: white;
+}
+
+.pictureAurora{
+    /*Fondo*/
+    background-image: url(fotoAurora.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    width: 50%;
+
+    top: 20%;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.message-text{
+    width: 50%;
+    padding: 2%;
+    text-align: justify;
+    font-size: 4vh;
+}
+  
+/*BORDE NEÓN*/  
+
+footer{
+  background-image: url(fotoAurora.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  top: 10%;
+  position: sticky;
+  position: -webkit-sticky;
+}
+
